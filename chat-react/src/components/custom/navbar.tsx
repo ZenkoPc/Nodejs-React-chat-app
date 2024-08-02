@@ -1,22 +1,16 @@
-import { FranceIcon, GermanyIcon, SpainIcon, USAIcon, WebcamIcon } from "@/utils/getIcons";
-import { ReactNode, useState } from "react";
+import { WebcamIcon } from "@/utils/getIcons";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from 'react-i18next'
 import { setLanguage as updateLang } from "@/utils/languages";
 import i18n from '../../i18n'
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "../../components/ui/dropdown-menu";
-
-interface countryIcon{
-  code: string
-  name: string
-  icon: ReactNode
-}
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "../ui/dropdown-menu";
 
 interface props {
-    es: countryIcon
-    en: countryIcon
-    fr: countryIcon
-    ge: countryIcon
+    es: string
+    en: string
+    fr: string
+    ge: string
   }
   
 
@@ -26,26 +20,10 @@ export function NavBar(){
     const { t } = useTranslation()
 
     const languages: props = {
-        'es': {
-          code: 'es',
-          name: 'Spanish',
-          icon: <SpainIcon />
-        },
-        'en': {
-          code: 'en',
-          name: 'English',
-          icon: <USAIcon />
-        },
-        'fr': {
-          code: 'fr',
-          name: 'French',
-          icon: <FranceIcon /> 
-        },
-        'ge': {
-          code: 'ge',
-          name: 'German',
-          icon: <GermanyIcon />
-        }
+        'es': 'Spanish',
+        'en': 'English',
+        'fr': 'French',
+        'ge': 'German'
     }
 
     const updateLanguage = (language: string) => {
@@ -56,11 +34,11 @@ export function NavBar(){
 
     return(
         <>
-        <header className="px-4 capitalize lg:px-6 min-h-14 flex items-center bg-[#111827] text-white">
+        <header className="px-4 lg:px-6 min-h-14 flex items-center bg-[#111827] text-white">
           <Link to={'/'} className="flex items-center justify-center">
-            <WebcamIcon />
+            <WebcamIcon className="h-6 w-6" />
             <span>
-              &nbsp; Chat App
+                Chat App
             </span>
             <span className="sr-only">Chat App</span>
           </Link>
@@ -78,26 +56,21 @@ export function NavBar(){
               {t('SignIn')}
             </Link>
             <DropdownMenu>
-                <DropdownMenuTrigger className="flex items-center gap-3">
-                    <span className="">
-                      {languages[language as keyof props].icon}
-                    </span>
-                    <span className="font-medium">
-                      {t(languages[language as keyof props].name)}
-                    </span>
+                <DropdownMenuTrigger>
+                    {t(languages[language])}
                 </DropdownMenuTrigger>
-                <DropdownMenuContent className="dark">
+                <DropdownMenuContent>
                     <DropdownMenuItem onClick={() => updateLanguage('es')}>
-                        {t(languages.es.name)}
+                        {languages.es}
                     </DropdownMenuItem>
                     <DropdownMenuItem onClick={() => updateLanguage('en')}>
-                        {t(languages.en.name)}
+                        {languages.en}
                     </DropdownMenuItem>
                     <DropdownMenuItem onClick={() => updateLanguage('fr')}>
-                        {t(languages.fr.name)}
+                        {languages.fr}
                     </DropdownMenuItem>
                     <DropdownMenuItem onClick={() => updateLanguage('ge')}>
-                        {t(languages.ge.name)}
+                        {languages.ge}
                     </DropdownMenuItem>
                 </DropdownMenuContent>
             </DropdownMenu>

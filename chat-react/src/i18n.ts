@@ -2,7 +2,7 @@ import i18n from 'i18next'
 import { initReactI18next } from 'react-i18next'
 import Backend from 'i18next-http-backend'
 
-const getCurrentHost = import.meta.env.MODE === 'development' ? 'https://localhost:5173' : window.location.origin
+const getCurrentHost = import.meta.env.MODE === 'development' ? 'https://localhost:5173' : 'Link to prod'
 
 i18n
     .use(Backend)
