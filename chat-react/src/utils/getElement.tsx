@@ -1,5 +1,5 @@
-import { Footer } from "@/components/custom/footer";
-import { NavBar } from "@/components/custom/navbar";
+import { Footer } from "@/utils/shared/footer";
+import { NavBar } from "@/utils/shared/navbar";
 import { Outlet } from "react-router-dom";
 
 export function GetElement(){

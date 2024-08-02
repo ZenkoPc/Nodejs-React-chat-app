@@ -2,6 +2,10 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './App.css'
 import { GetElement } from './utils/getElement'
 import { Home } from './components/custom/home'
+import { Auth } from './components/custom/auth'
+import { JoinChat } from './components/custom/joinchat'
+import { CreateChat } from './components/custom/createchat'
+import { AnimatePresence } from 'framer-motion'
 
 function App() {
 
@@ -16,13 +20,13 @@ function App() {
         path: 'v1',
         children: [{
           path: 'newChat',
-          element: /*<NewChat />*/<p>a</p>
+          element: <CreateChat />
         },{
           path: 'joinChat',
-          element: /*<JoinChat />*/<p>a</p>
+          element: <JoinChat />
         },{
           path: 'auth',
-          element: /*<Login />*/<p>a</p>
+          element: <Auth />
         },{
           path: 'roomchat/:room',
           element: /*<ChatRoom />*/<p>a</p>
@@ -35,7 +39,9 @@ function App() {
   ])
 
   return (
-    <RouterProvider router={router} />
+    <AnimatePresence mode='wait'>
+      <RouterProvider router={router} key={location.pathname}/>
+    </AnimatePresence>
   )
 }
 
