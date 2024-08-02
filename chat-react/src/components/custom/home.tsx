@@ -1,8 +1,8 @@
-import { Chat } from "./home/chat";
-import { Features } from "./home/features";
-import { Hero } from "./home/hero";
-import { SliderLogos } from "./home/slider";
-import { Tryout } from "./home/tryout";
+import { Chat } from "./chat";
+import { Features } from "./features";
+import { Hero } from "./hero";
+import { SliderLogos } from "./slider";
+import { Tryout } from "./tryout";
 
 export function Home(){
     return(
