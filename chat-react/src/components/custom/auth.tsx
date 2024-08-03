@@ -9,7 +9,7 @@ export function Auth() {
         <title>Login - Chat app</title>
         <meta
           name="description"
-          content="A chat app to chat with another people xd"
+          content="Login to Chat app, your ultimate communication hub! Log in to stay connected with instant messaging, multimedia sharing, high-quality video and voice calls, and secure group chats. Experience seamless communication with end-to-end encryption and cloud sync. Log in now!"
         />
       </Helmet>
       <section className="w-full py-12 md:py-24 lg:py-32">

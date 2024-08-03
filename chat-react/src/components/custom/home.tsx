@@ -12,7 +12,7 @@ export function Home() {
         <title>Home - Chat app</title>
         <meta
           name="description"
-          content="A chat app to chat with another people xd"
+          content="Stay connected with Chat app, the all-in-one messaging app for instant messaging, multimedia sharing, video and voice calls, group chats, and more. Enjoy secure, seamless communication with end-to-end encryption and cloud sync. Download now!"
         />
       </Helmet>
       <Hero />

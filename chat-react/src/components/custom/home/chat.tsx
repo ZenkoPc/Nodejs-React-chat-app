@@ -30,6 +30,7 @@ export function Chat(){
               <CardContent className="flex-1 overflow-y-auto">
                 <div className="flex flex-col gap-4">
                   <Message 
+                    key={'message1'}
                     avatar="😁"
                     hour="2:39pm"
                     message={t('1stTextChat')}
@@ -38,6 +39,7 @@ export function Chat(){
                     active={true}
                   />
                   <Message 
+                    key={'message2'}
                     avatar="😎"
                     hour="2:40pm"
                     message={t('2ndTextChat')}
@@ -46,6 +48,7 @@ export function Chat(){
                     active={false}
                   />
                   <Message 
+                    key={'message3'}
                     avatar="🤠"
                     hour="2:41pm"
                     message={t('3rdTextChat')}

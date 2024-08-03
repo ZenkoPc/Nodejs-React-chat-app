@@ -32,31 +32,31 @@ export function SliderLogos(){
                 pauseOnHover={false}
                 blurBorders={false}
             >
-                <Slider.Slide>
+                <Slider.Slide key={'image1'}>
                     <img className='w-24' src="react-2.svg" alt="react-logo" />
                 </Slider.Slide>
-                <Slider.Slide>
+                <Slider.Slide key={'image2'}>
                     <img className='w-24' src="typescript.svg" alt="typescript-logo" />
                 </Slider.Slide>
-                <Slider.Slide>
+                <Slider.Slide key={'image3'}>
                     <img className='w-36' src="tailwindcss.svg" alt="tailwind-css-1-logo" />
                 </Slider.Slide>
-                <Slider.Slide>
+                <Slider.Slide key={'image4'}>
                     <img className='w-44' src="react-router-stacked-color-inverted.svg" alt="react-router-color-inverted-logo" />
                 </Slider.Slide>
-                <Slider.Slide>
+                <Slider.Slide key={'image5'}>
                     <img className='w-44' src="nodejs.svg" alt="nodejs-logo" />
                 </Slider.Slide>
-                <Slider.Slide>
+                <Slider.Slide key={'image6'}>
                     <img className='w-44 bg-slate-100 p-4' src="express-109.svg" alt="express-109-logo" />
                 </Slider.Slide>
-                <Slider.Slide>
+                <Slider.Slide key={'image6'}>
                     <img className='w-44' src="jwtio-json-web-token.svg" alt="jwtio-json-web-token-logo" />
                 </Slider.Slide>
-                <Slider.Slide>
+                <Slider.Slide key={'image7'}>
                     <img className='w-24' src="socket-io.svg" alt="socket-io-logo" />
                 </Slider.Slide>
-                <Slider.Slide>
+                <Slider.Slide key={'image8'}>
                     <img className='w-24' src="mysql-2.svg" alt="mysql-2-logo" />
                 </Slider.Slide>
             </Slider>

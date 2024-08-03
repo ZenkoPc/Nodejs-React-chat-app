@@ -12,7 +12,7 @@ export function CreateChat() {
         <title>Create a new chat - Chat app</title>
         <meta
           name="description"
-          content="A chat app to chat with another people xd"
+          content="Create a chat with Chat app, your ultimate communication hub! Start new chats effortlessly and stay connected with instant messaging, multimedia sharing, high-quality video and voice calls, and secure group chats. Experience seamless communication with end-to-end encryption and cloud sync. Get started now!"
         />
       </Helmet>
       <HeroCreate />
