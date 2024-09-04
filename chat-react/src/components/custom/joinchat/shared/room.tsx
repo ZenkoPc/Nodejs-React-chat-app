@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardContent, CardFooter } from "@/components/ui/card";
 import { Avatar, AvatarImage, AvatarFallback } from "@radix-ui/react-avatar";
+import { motion } from "framer-motion";
 import { PlusIcon } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
@@ -15,7 +16,13 @@ export function Room(props: props) {
   const { t } = useTranslation()
 
   return (
-    <>
+    <motion.div
+      transition={{ duration: 1 }}
+      initial={{ opacity: 0 }}
+      viewport={{ once: true }}
+      whileInView={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
       <Card className="border border-black/70 bg-black/50 shadow-none hover:bg-black/40 hover:border-white hover:border transition-all">
         <CardHeader className="flex items-center justify-between">
           <div className="flex items-center gap-2">
@@ -44,6 +51,6 @@ export function Room(props: props) {
           </Button>
         </CardFooter>
       </Card>
-    </>
+    </motion.div>
   );
 }
