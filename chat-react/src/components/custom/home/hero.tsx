@@ -12,7 +12,7 @@ export function Hero() {
         <div className="container px-4 md:px-6">
           <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
             <div className="flex flex-col justify-center space-y-4">
-              <div className="space-y-2 flex flex-col">
+              <div className="space-y-2 flex flex-col gap-5">
                 <RealTyper
                   strings={[t("PrimaryTitle")]}
                   loop={false}
@@ -28,8 +28,8 @@ export function Hero() {
                   callback={() => {}}
                   callbackArgs={undefined}
                   developerMode={false}
-                  cursorCharacter={""}
-                  cursorBlink={false}
+                  cursorCharacter={"|"}
+                  cursorBlink={true}
                   classes="text-3xl text-white font-bold tracking-tighter sm:text-5xl xl:text-6xl/none dark:text-foreground"
                 />
                 <RealTyper
@@ -52,7 +52,13 @@ export function Hero() {
                   classes="max-w-[600px] text-muted-foreground md:text-xl dark:text-muted-foreground"
                 />
               </div>
-              <div className="flex flex-col gap-2 min-[400px]:flex-row">
+              <motion.div 
+                transition={{ duration: 0.8}}
+                initial={{ x: "-100%" }}
+                viewport={{ once: true }}
+                whileInView={{ x: "0" }}
+                exit={{ x: "100%" }}
+                className="flex flex-col gap-2 min-[400px]:flex-row">
                 <Link
                   to="#"
                   className="inline-flex border border-slate-800 hover:border-white transition-all h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 capitalize"
@@ -65,7 +71,7 @@ export function Hero() {
                 >
                   {t("LearnMore")}
                 </Link>
-              </div>
+              </motion.div>
             </div>
             <motion.img
               transition={{ duration: 0.5, delay: 0.1 }}
